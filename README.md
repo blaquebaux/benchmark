@@ -61,6 +61,28 @@ risk-off regime (`market_regime.txt`) *with that caveat* — a risk map to READ 
 alpha. Same honest lesson as [Bubble](https://github.com/blaquebaux/bubble): diagnostics flag, they
 don't time.
 
+## Live driver — regime emitter (paper/dry-run)
+
+The composite is now a governed driver on the engine ([`live/benchmark_live.jl`](live/benchmark_live.jl)).
+Each run it:
+
+1. **Publishes the market regime** to `~/.config/blaquebaux/market_regime.txt` (composite score + a
+   `risk_on` flag) — the family's **third regime signal** after
+   [bonds](https://github.com/blaquebaux/bonds)' stock-bond and [brics](https://github.com/blaquebaux/brics)'
+   dollar. The file itself carries the honest label: *mostly vol-timing, not breadth forecasting.*
+2. **Trades the regime's own expression** — hold **80% SPY** when risk-on (the 85% single-name safety-gate
+   cap; the rest cash), **flat/cash** when risk-off — through the same Layer-3 gate, ledger, reconcile,
+   kill switch and HWM as the spine.
+
+```bash
+BB_DRYRUN=1 bash live/run_benchmark_daily.sh          # compute + publish the regime, place nothing
+```
+
+**Validation of record is [`research/benchmark_3_composite_regime.py`](research/benchmark_3_composite_regime.py)**
+— gated SPY beats buy-&-hold net of cost (Sharpe +0.87→+1.11, maxDD −34%→−16%), with the honest caveat
+that the edge is vol-timing (strip the vol signals and the non-vol internals barely clear buy-&-hold).
+Dry-run verified (today: **risk-on**, composite +0.20). Not a live-money endorsement; paper by default.
+
 ## About Blaque Baux
 
 **Blaque Baux** is a quantitative research initiative and a subsidiary of **[Carter Warrens](https://carterwarrens.com)**.
@@ -82,7 +104,7 @@ base/blueprint and holds the [full family roster](https://github.com/blaquebaux/
 ```
 engine/     the Blaque Baux platform (git submodule -> blaquebaux/base)
 research/   three sketches (internals dashboard, lead-vs-coincide, composite regime) + scorecard
-live/       governed live drivers / regime emitter (once a sleeve graduates)
+live/       benchmark_live.jl (regime emitter + gated-SPY book) + run wrapper + plist
 ```
 
 ## License

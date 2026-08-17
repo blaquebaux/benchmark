@@ -57,5 +57,5 @@ SIZE with, not novel alpha. ($TICK, $CPC, $ADD, and the MOVE *index* couldn't be
 ## Status
 **Research: first pass complete.** A coherent market-internals dashboard that yields a tradable
 risk-off regime (net of cost) — but it is **vol-timing, not breadth alpha** (the internals coincide;
-the vol signals do the work). Publishable as a family regime signal with that honest caveat; no live
-emitter yet. Nothing validated to the spine's bar.
+the vol signals do the work). Now published via a live emitter
+(`live/benchmark_live.jl` → `market_regime.txt`), labeled as vol-timing. Nothing validated to the spine's bar.

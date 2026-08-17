@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- benchmark market-internals regime emitter. DRY-RUN by default until ~/.config/blaquebaux/alpaca_benchmark.env exists.
+     Publishes market_regime.txt for the family. Activate: cp to ~/Library/LaunchAgents/ and launchctl load. -->
+<plist version="1.0"><dict>
+  <key>Label</key><string>com.blaquebaux.benchmark</string>
+  <key>ProgramArguments</key><array><string>/bin/bash</string><string>/Users/malcolmx/blaquebaux-benchmark/live/run_benchmark_daily.sh</string></array>
+  <key>StartCalendarInterval</key><array>
+    <dict><key>Hour</key><integer>9</integer><key>Minute</key><integer>34</integer></dict>
+    <dict><key>Hour</key><integer>10</integer><key>Minute</key><integer>44</integer></dict>
+  </array>
+  <key>RunAtLoad</key><false/>
+  <key>EnvironmentVariables</key><dict><key>PATH</key><string>/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin</string></dict>
+  <key>StandardOutPath</key><string>/Users/malcolmx/blaquebaux-benchmark/logs/launchd_benchmark.out</string>
+  <key>StandardErrorPath</key><string>/Users/malcolmx/blaquebaux-benchmark/logs/launchd_benchmark.err</string>
+</dict></plist>
