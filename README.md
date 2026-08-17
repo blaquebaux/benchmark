@@ -49,6 +49,7 @@ Full detail in [`research/README.md`](research/README.md). The scorecard (Alpaca
 | 1 | Are the internals a coherent dashboard? | ✅ correctly signed (VIXY corr −0.77, credit +0.47, defensives −0.43; risk-off internals spike on the worst SPY days) |
 | 2 | Do they **lead** SPY or **coincide**? | ❌ **coincident** — fwd-20d spreads tiny/wrong-signed; peak cross-corr at k=0 (they mirror the tape) |
 | 3 | Is the composite a **tradable regime**? | ⚠️ passes net of cost (gated SPY +0.87→+1.11 Sharpe, DD −34%→−16%) — but it's **vol-timing**: non-vol internals barely beat B&H (+0.89) |
+| 4 | *Where* does it earn its keep? | ✅ on a **naive long book** (SPY B&H +0.87→+1.11) — value shrinks monotonically with the book's own risk management; **redundant** on managed sleeves (broad +0.84→+0.80) |
 
 **The synthesis:** benchmark is a coherent risk **dashboard** that resolves into a genuine **risk-off
 regime** — which, honestly, is **vol-timing, not the breadth/credit edge it looks like**. The internals
