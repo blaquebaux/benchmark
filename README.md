@@ -1,5 +1,7 @@
 # Blaque Baux Benchmark
 
+> **LIVE PATH · REGIME EMITTER** &nbsp;|&nbsp; Python / Julia &nbsp;|&nbsp; [Interactive study](https://www.blaquebaux.com/labs/) &nbsp;|&nbsp; [Research corpus](https://www.blaquebaux.com/corpus/) &nbsp;|&nbsp; [Citation](CITATION.cff)
+
 **Market internals as a risk-regime read — do the confirming/diverging signals predict, or just coincide?**
 
 Benchmark is a member of the Blaque Baux family. The [core repo](https://github.com/blaquebaux/base)

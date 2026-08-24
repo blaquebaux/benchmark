@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software or research, please cite it using the metadata below."
+title: "BLAQUE BAUX Benchmark: Market Internals and Governed Risk-Regime Research"
+type: software
+authors:
+  - name: "BLAQUE BAUX"
+repository-code: "https://github.com/blaquebaux/benchmark"
+url: "https://www.blaquebaux.com/labs/"
+license: MIT
+keywords:
+  - market internals
+  - regime detection
+  - quantitative finance
+  - volatility timing
+  - risk management
